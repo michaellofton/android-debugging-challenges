@@ -15,31 +15,6 @@
         android:id="@+id/tvDescription"
         android:layout_centerHorizontal="true" />
 
-    <!--
-       /**
-         * Milestone 3 - Toolbar
-         * 1. res > layout > activity_toolbar - Change
-         *     from     <androidx.appcompat.widget.Toolbar>
-         *     to:      <Toolbar>
-         *     Why:     setActionBar(toolbar) is trying to use the version of the toolbar widget
-         *              from <android.widget.Toolbar> while the existing view in the xml layout
-         *              file is using the toolbar widget from <androidx.appcompat.widget.Toolbar>.
-         *              The androidx library is a library that includes every modern type of view
-         *              but supports backwards compatibility. This allows app developers to use
-         *              existing UI designs on older versions of the Android OS with minimal problems.
-         *              It's usually good to use the androidx library, but because the setActionBar
-         *              method requires <Toolbar>, we want to change it.
-         */
-    -->
-    <Toolbar
-        android:id="@+id/toolbar"
-        android:minHeight="?attr/actionBarSize"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:titleTextColor="@android:color/white"
-        android:background="?attr/colorPrimary">
-    </Toolbar>
-    <!--
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:minHeight="?attr/actionBarSize"
@@ -48,6 +23,5 @@
         app:titleTextColor="@android:color/white"
         android:background="?attr/colorPrimary">
     </androidx.appcompat.widget.Toolbar>
-     -->
 
 </RelativeLayout>
