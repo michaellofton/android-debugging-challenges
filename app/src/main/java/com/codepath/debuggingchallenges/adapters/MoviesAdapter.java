@@ -21,6 +21,10 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.ViewHolder
 
     private List<Movie> movies;
 
+    public MoviesAdapter(List<Movie> givenMovies) {
+        this.movies = givenMovies;
+    }
+
     public class ViewHolder extends RecyclerView.ViewHolder {
         // only needed because we need to set the background color
         View view;
@@ -40,13 +44,10 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.ViewHolder
         }
     }
 
-    public MoviesAdapter(List<Movie> movies) {
-        this.movies = movies;
-    }
-
     @Override
     public int getItemCount() {
-        return 0;
+        // #7. getItemCount should always return the size of the data we're working with.
+        return movies.size();
     }
 
     @NonNull
